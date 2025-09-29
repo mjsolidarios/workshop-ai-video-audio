@@ -1,0 +1,868 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Synth-Design: A Creative Engineering for AI Motion and Sound</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/monokai.css">
+		
+		<!-- Hand tracking styles -->
+		<!-- <link rel="stylesheet" href="assets/hand-tracking.css"> -->
+		
+		<!-- Interactive presentation styles -->
+		<link rel="stylesheet" href="assets/interactive-elements.css">
+	</head>
+	<body>
+		<!-- Hand tracking elements -->
+		<!-- <video id="hand-video" autoplay muted playsinline></video>
+		<canvas id="hand-canvas"></canvas> -->
+		
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+					<h2>Synth-Design</h2>
+					<p class="text-bold">A Creative Engineering for AI Motion and Sound</p>
+					<p>Exploring the Future of AI-Generated Content</p>
+					<div class="social-container">
+						<small>
+						  <p>Mark Joseph J. Solidarios, MSCS</p>
+						  <a href="mailto: mjsolidarios@wvsu.edu.ph" target="_blank">
+							<img class="social" src="assets/mail.svg" alt="Email" />
+						  </a>
+						  <a href="https://github.com/mjsolidarios" target="_blank">
+							<img class="social" src="assets/github.svg" alt="GitHub" />
+						  </a>
+						  <a
+							href="https://www.facebook.com/sexynojutsuuser"
+							target="_blank"
+						  >
+							<img class="social" src="assets/facebook.svg" alt="Facebook" />
+						  </a>
+						  <a href="https://www.twitter.com/mjsolidarios" target="_blank">
+							<img class="social" src="assets/twitter.svg" alt="Twitter" />
+						  </a>
+						</small>
+					  </div>
+				</section>
+<!-- Introduction Section -->
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">What is Synth-Design?</h2>
+<p class="fragment">The art of creating <span class="glow">AI-generated video and audio</span> content</p>
+<p class="fragment">Combining <span class="pulse">technology</span> with <span class="pulse">creativity</span></p>
+</section>
+
+<!-- Poll Slide -->
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.6)">
+<h2 class="fragment">📊 Quick Poll</h2>
+<div class="poll-container fragment">
+    <p><strong>Have you ever used AI to create content?</strong></p>
+    <div class="poll-options">
+        <div class="poll-option" onclick="submitPollVote('intro-poll', 0)">
+            Yes, frequently <span class="poll-count" id="intro-poll_count_0">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('intro-poll', 1)">
+            A few times <span class="poll-count" id="intro-poll_count_1">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('intro-poll', 2)">
+            Never, but interested <span class="poll-count" id="intro-poll_count_2">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('intro-poll', 3)">
+            No, not interested <span class="poll-count" id="intro-poll_count_3">0</span>
+        </div>
+    </div>
+</div>
+
+<script>
+// Initialize poll data
+if (typeof presentationData !== 'undefined') {
+    presentationData.polls['intro-poll'] = {
+        question: "Have you ever used AI to create content?",
+        options: ["Yes, frequently", "A few times", "Never, but interested", "No, not interested"],
+        votes: {}
+    };
+}
+</script>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Why Does This Matter?</h2>
+
+<!-- Animated Statistics -->
+<div class="fragment" style="display: flex; justify-content: space-around; margin: 40px 0;">
+    <div class="counter-container">
+        <div class="counter" id="ai-tools-counter">0</div>
+        <div class="counter-label">AI Tools Available</div>
+    </div>
+    <div class="counter-container">
+        <div class="counter" id="marketers-using-ai-counter">0</div>
+        <div class="counter-label">% of Marketers using AI</div>
+    </div>
+    <div class="counter-container">
+        <div class="counter" id="cost-savings-counter">0</div>
+        <div class="counter-label">% Cost Reduction</div>
+    </div>
+</div>
+
+<ul>
+<li class="fragment">📈 Rapid evolution in AI technology</li>
+<li class="fragment">⚡ Huge productivity tool potential</li>
+<li class="fragment">🌍 Democratizing content creation</li>
+<li class="fragment">💼 New career opportunities</li>
+</ul>
+
+<script>
+// Animate counters when slide appears
+Reveal.on('slidechanged', function(event) {
+    if (event.currentSlide.querySelector('#ai-tools-counter')) {
+        setTimeout(() => {
+            animateCounter('ai-tools-counter', 10000, 2000);
+            animateCounter('marketers-using-ai-counter', 63, 2500);
+            animateCounter('cost-savings-counter', 75, 3000);
+        }, 1000);
+    }
+});
+</script>
+</section>
+
+<!-- Technology & How It Works Section -->
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.7)">
+<h1 class="fragment">The Technology & How It Works</h1>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">AI Video Generation</h2>
+<ul>
+<li class="fragment"><strong>Text-to-Video:</strong> Type a description, get a video</li>
+<li class="fragment"><strong>Neural Networks:</strong> AI learns from millions of videos</li>
+<li class="fragment"><strong>Frame Generation:</strong> Creates smooth motion between scenes</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Real Example: Text-to-Video</h2>
+<div class="flip-card fragment">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <h3>📝 Input Prompt</h3>
+            <p><strong>"A cat walking on a sunny beach"</strong></p>
+            <p><em>Hover to see AI output!</em></p>
+        </div>
+        <div class="flip-card-back">
+            <h3>🎬 AI Output</h3>
+            <ul>
+                <li>✅ Realistic cat movement</li>
+                <li>🌊 Ocean waves in background</li>
+                <li>☀️ Natural lighting and shadows</li>
+                <li>📷 Smooth camera movement</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<p class="fragment"><button class="interactive-btn" onclick="startDemo('video')">🚀 Try Live Demo</button></p>
+
+<script>
+// Light up video badge when this slide is shown
+Reveal.on('slidechanged', function(event) {
+    if (event.currentSlide.querySelector('.interactive-btn[onclick*="video"]')) {
+        const badge = document.getElementById('video-badge');
+        if (badge) {
+            badge.style.opacity = '1';
+            badge.style.animation = 'pulse 1s infinite';
+        }
+    }
+});
+</script>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Popular AI Video Tools</h2>
+<ul>
+<li class="fragment"><strong>MiniMax Hailuo:</strong> High-quality video generation</li>
+<li class="fragment"><strong>Runway ML:</strong> Professional video editing</li>
+<li class="fragment"><strong>Pika Labs:</strong> Simple text-to-video</li>
+<li class="fragment"><strong>Stable Video:</strong> Open-source option</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Video Generation Scenarios</h2>
+<ul>
+<li class="fragment"><strong>Marketing:</strong> Product demos without filming</li>
+<li class="fragment"><strong>Education:</strong> Historical recreations</li>
+<li class="fragment"><strong>Social Media:</strong> Quick content creation</li>
+<li class="fragment"><strong>Prototyping:</strong> Concept visualization</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">AI Audio & Voice Cloning</h2>
+<ul>
+<li class="fragment"><strong>Voice Synthesis:</strong> Create speech from text</li>
+<li class="fragment"><strong>Voice Cloning:</strong> Mimic any voice with samples</li>
+<li class="fragment"><strong>Music Generation:</strong> AI composes original songs</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Voice Cloning Example</h2>
+<p class="fragment"><strong>Input:</strong> 30 seconds of your voice saying:</p>
+<p class="fragment">"Hello, my name is John. I love learning new things."</p>
+<br>
+<p class="fragment"><strong>Output:</strong> AI can now say in YOUR voice:</p>
+<p class="fragment">"Welcome to our presentation on AI technology!"</p>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Real Voice Cloning Applications</h2>
+<ul>
+<li class="fragment"><strong>Medical:</strong> Voice restoration after illness</li>
+<li class="fragment"><strong>Entertainment:</strong> Movie dubbing in any language</li>
+<li class="fragment"><strong>Business:</strong> Consistent brand voice for ads</li>
+<li class="fragment"><strong>Personal:</strong> Audiobook narration</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">AI Music Generation Example</h2>
+<p class="fragment"><strong>Prompt:</strong> "Upbeat pop song about friendship"</p>
+<br>
+<p class="fragment"><strong>AI Creates:</strong></p>
+<ul>
+<li class="fragment">Catchy melody and rhythm</li>
+<li class="fragment">Lyrics about friendship</li>
+<li class="fragment">Full instrumental arrangement</li>
+<li class="fragment">Professional-quality audio</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Popular AI Audio Tools</h2>
+<ul>
+<li class="fragment"><strong>MiniMax Speech:</strong> Advanced voice cloning</li>
+<li class="fragment"><strong>Suno:</strong> AI music generation</li>
+<li class="fragment"><strong>ElevenLabs:</strong> Realistic voice synthesis</li>
+<li class="fragment"><strong>Mubert:</strong> AI background music</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">How It Actually Works</h2>
+<ol>
+<li class="fragment">AI trains on massive datasets</li>
+<li class="fragment">Learns patterns and styles</li>
+<li class="fragment">Generates new content based on prompts</li>
+<li class="fragment">Refines output through iterations</li>
+</ol>
+</section>
+
+<!-- Exciting Applications Section -->
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.7)">
+<h1 class="fragment">Applications & Creative Potential</h1>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Film & Animation Examples</h2>
+<ul>
+<li class="fragment"><strong>Concept Art:</strong> Generate scene ideas in minutes</li>
+<li class="fragment"><strong>Storyboarding:</strong> Visualize scripts quickly</li>
+<li class="fragment"><strong>Background Replacement:</strong> Change locations instantly</li>
+<li class="fragment"><strong>Character Animation:</strong> Bring drawings to life</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+    <h2 class="fragment">Marketing Success Story</h2>
+    <div class="fragment">
+        <h3>🥤 Coca-Cola</h3>
+        <p><strong>AI-generated holiday ads</strong></p>
+        <p><em>Saved 60% on production costs</em></p>
+    </div>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+    <h2 class="fragment">Marketing Success Story</h2>
+    <div class="fragment">
+        <h3>👏 Nike</h3>
+        <p><strong>Personalized athlete videos</strong></p>
+        <p><em>10x more engagement</em></p>
+    </div>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+    <h2 class="fragment">Marketing Success Story</h2>
+    <div class="fragment">
+        <h3>🏢 Small Business</h3>
+        <p><strong>$100 budget, professional ads</strong></p>
+        <p><em>Previously would cost $10,000+</em></p>
+    </div>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+    <h2 class="fragment">Marketing Success Story</h2>
+    <div class="fragment">
+        <h3>📱 Social Media</h3>
+        <p><strong>Daily content creation</strong></p>
+        <p><em>From 1 post/week to 7 posts/day</em></p>
+    </div>
+</section>
+
+<!-- Marketing Poll Slide -->
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.6)">
+<h2 class="fragment">📊 Quick Poll</h2>
+<div class="poll-container fragment">
+    <p><strong>Which success story interests you most?</strong></p>
+    <div class="poll-options">
+        <div class="poll-option" onclick="submitPollVote('marketing-poll', 0)">
+            Coca-Cola's cost savings <span class="poll-count" id="marketing-poll_count_0">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('marketing-poll', 1)">
+            Nike's engagement boost <span class="poll-count" id="marketing-poll_count_1">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('marketing-poll', 2)">
+            Small business accessibility <span class="poll-count" id="marketing-poll_count_2">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('marketing-poll', 3)">
+            Social media scaling <span class="poll-count" id="marketing-poll_count_3">0</span>
+        </div>
+    </div>
+</div>
+
+<script>
+// Initialize poll data
+if (typeof presentationData !== 'undefined') {
+    presentationData.polls['marketing-poll'] = {
+        question: "Which success story interests you most?",
+        options: ["Coca-Cola's cost savings", "Nike's engagement boost", "Small business accessibility", "Social media scaling"],
+        votes: {}
+    };
+}
+</script>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Education Transformation</h2>
+<ul>
+<li class="fragment"><strong>History Class:</strong> Walk through ancient Rome</li>
+<li class="fragment"><strong>Science:</strong> Visualize molecular structures</li>
+<li class="fragment"><strong>Language Learning:</strong> Native speaker conversations</li>
+<li class="fragment"><strong>Training Videos:</strong> Step-by-step tutorials</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Gaming Revolution</h2>
+<ul>
+<li class="fragment"><strong>NPC Voices:</strong> Unique character personalities</li>
+<li class="fragment"><strong>Dynamic Music:</strong> Adaptive game soundtracks</li>
+<li class="fragment"><strong>Cutscenes:</strong> Generated story sequences</li>
+<li class="fragment"><strong>User Content:</strong> Player-created videos</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Social Media Success</h2>
+<ul>
+<li class="fragment"><strong>Instagram Reels:</strong> Daily content without filming</li>
+<li class="fragment"><strong>TikTok Videos:</strong> Trending content in minutes</li>
+<li class="fragment"><strong>YouTube Shorts:</strong> Quick educational clips</li>
+<li class="fragment"><strong>LinkedIn Posts:</strong> Professional video content</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Professional Applications</h2>
+<ul>
+<li class="fragment"><strong>Corporate Training:</strong> Multilingual safety videos</li>
+<li class="fragment"><strong>Product Demos:</strong> Show features without prototypes</li>
+<li class="fragment"><strong>Customer Service:</strong> Automated response videos</li>
+<li class="fragment"><strong>Presentations:</strong> Engaging visual storytelling</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Creative Personal Projects</h2>
+<ul>
+<li class="fragment"><strong>Family Videos:</strong> Preserve memories creatively</li>
+<li class="fragment"><strong>Wedding Content:</strong> Personalized music and videos</li>
+<li class="fragment"><strong>Hobby Channels:</strong> Share interests with others</li>
+<li class="fragment"><strong>Learning Content:</strong> Teach others your skills</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Accessibility & Inclusion</h2>
+<ul>
+<li class="fragment">Voice restoration for medical patients</li>
+<li class="fragment">Content in multiple languages</li>
+<li class="fragment">Visual storytelling for the hearing impaired</li>
+<li class="fragment">Audio descriptions for the visually impaired</li>
+</ul>
+</section>
+
+<!-- Challenges & Ethical Dilemmas Section -->
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.7)">
+<h1 class="fragment">Major Challenges & Ethical Dilemmas</h1>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Deepfakes & Misinformation</h2>
+<ul>
+<li class="fragment">Fake videos of public figures</li>
+<li class="fragment">Spread of false information</li>
+<li class="fragment">Identity theft and fraud</li>
+<li class="fragment">Political manipulation</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Real Deepfake Cases</h2>
+
+<div class="flip-card fragment">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <h3>🏢 The $25 Million Video Call</h3>
+            <p>An employee at Arup receives a video call from their "CFO"...</p>
+            <p><em>Hover to see what happened</em></p>
+        </div>
+        <div class="flip-card-back">
+            <h3>⚠️ The Truth</h3>
+            <p>🤖 Deepfake video and voice</p>
+            <p>💰 $25 million transferred to fraudsters</p>
+            <p>🔍 Occurred in February 2024</p>
+            <p>🎨 Part of a sophisticated scam</p>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<!-- Deepfake Protection Poll Slide -->
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.6)">
+<h2 class="fragment">📊 Security Poll</h2>
+<p class="fragment"><em>What would you do if you received a suspicious call from your boss?</em></p>
+
+<div class="poll-container fragment">
+    <p><strong>How can you protect yourself from voice scams?</strong></p>
+    <div class="poll-options">
+        <div class="poll-option" onclick="submitPollVote('security-poll', 0)">
+            Always trust caller ID <span class="poll-count" id="security-poll_count_0">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('security-poll', 1)">
+            Verify through another channel <span class="poll-count" id="security-poll_count_1">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('security-poll', 2)">
+            Ignore all urgent calls <span class="poll-count" id="security-poll_count_2">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('security-poll', 3)">
+            Record every conversation <span class="poll-count" id="security-poll_count_3">0</span>
+        </div>
+    </div>
+</div>
+
+<script>
+// Initialize poll data
+if (typeof presentationData !== 'undefined') {
+    presentationData.polls['security-poll'] = {
+        question: "How can you protect yourself from voice scams?",
+        options: ["Always trust caller ID", "Verify through another channel", "Ignore all urgent calls", "Record every conversation"],
+        votes: {}
+    };
+}
+</script>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">How to Spot Deepfakes</h2>
+<ul>
+<li class="fragment"><strong>Blinking Patterns:</strong> Unnatural or no blinking</li>
+<li class="fragment"><strong>Audio Sync:</strong> Voice doesn't match lip movement</li>
+<li class="fragment"><strong>Facial Edges:</strong> Blurry boundaries around face</li>
+<li class="fragment"><strong>Background:</strong> Distorted or inconsistent</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Job Displacement</h2>
+<ul>
+<li class="fragment">Voice actors and musicians</li>
+<li class="fragment">Video editors and animators</li>
+<li class="fragment">Content creators and influencers</li>
+<li class="fragment">Need for new skill adaptation</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Industry Impact Examples</h2>
+<ul>
+<li class="fragment"><strong>Voice Acting:</strong> Audiobook narration rates dropping</li>
+<li class="fragment"><strong>Stock Photography:</strong> AI images replacing stock photos</li>
+<li class="fragment"><strong>Music Production:</strong> Background music generated by AI</li>
+<li class="fragment"><strong>Video Editing:</strong> Automated editing tools emerging</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Jobs at Risk vs. Safe</h2>
+<p class="fragment"><strong>At Risk:</strong></p>
+<ul>
+<li class="fragment">Repetitive creative tasks</li>
+<li class="fragment">Template-based work</li>
+</ul>
+<p class="fragment"><strong>Safe:</strong></p>
+<ul>
+<li class="fragment">Creative direction and strategy</li>
+<li class="fragment">Human connection and empathy</li>
+</ul>
+</section>
+
+<!-- Solutions & Path Forward Section -->
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.7)">
+<h1 class="fragment">Solutions & The Path Forward</h1>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Detection & Verification</h2>
+<ul>
+<li class="fragment">AI detection tools</li>
+<li class="fragment">Content authentication systems</li>
+<li class="fragment">Digital watermarking</li>
+<li class="fragment">Blockchain verification</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Real Detection Tools</h2>
+<ul>
+<li class="fragment"><strong>DuckDuckGoose:</strong> Video deepfake detection</li>
+<li class="fragment"><strong>Deepware:</strong> Free online deepfake scanner</li>
+<li class="fragment"><strong>Microsoft Video Authenticator:</strong> Real-time detection</li>
+<li class="fragment"><strong>Adobe Content Authenticity:</strong> Origin tracking</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Watermarking Examples</h2>
+<ul>
+<li class="fragment"><strong>OpenAI:</strong> Invisible watermarks in AI content</li>
+<li class="fragment"><strong>Google:</strong> SynthID for AI-generated media</li>
+<li class="fragment"><strong>Meta:</strong> Watermarks in AI images</li>
+<li class="fragment"><strong>C2PA:</strong> Industry standard for provenance</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Regulation & Guidelines</h2>
+<ul>
+<li class="fragment">Industry standards and ethics</li>
+<li class="fragment">Government regulations</li>
+<li class="fragment">Platform policies</li>
+<li class="fragment">User education and awareness</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Government Actions</h2>
+<ul>
+<li class="fragment"><strong>EU AI Act:</strong> Regulates AI systems by risk level</li>
+<li class="fragment"><strong>China:</strong> Requires deepfake labeling</li>
+<li class="fragment"><strong>California:</strong> Laws against malicious deepfakes</li>
+<li class="fragment"><strong>UK:</strong> AI safety initiatives and guidelines</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Platform Policies</h2>
+<ul>
+<li class="fragment"><strong>TikTok:</strong> Labels AI-generated content</li>
+<li class="fragment"><strong>YouTube:</strong> Requires disclosure for synthetic media</li>
+<li class="fragment"><strong>Instagram:</strong> Detection and removal tools</li>
+<li class="fragment"><strong>Twitter/X:</strong> Synthetic media policies</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Collaboration Over Competition</h2>
+<ul>
+<li class="fragment">AI as a creative tool, not replacement</li>
+<li class="fragment">Human-AI collaboration</li>
+<li class="fragment">Upskilling and reskilling programs</li>
+<li class="fragment">New creative opportunities</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">Success Stories</h2>
+<ul>
+<li class="fragment"><strong>Pixar:</strong> AI speeds up animation, humans direct</li>
+<li class="fragment"><strong>Spotify:</strong> AI suggests, humans curate playlists</li>
+<li class="fragment"><strong>Adobe:</strong> AI tools empower creative professionals</li>
+<li class="fragment"><strong>Netflix:</strong> AI generates thumbnails, humans optimize</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg">
+<h2 class="fragment">New Job Opportunities</h2>
+<ul>
+<li class="fragment"><strong>AI Prompt Engineers:</strong> Writing effective prompts</li>
+<li class="fragment"><strong>AI Content Reviewers:</strong> Quality control specialists</li>
+<li class="fragment"><strong>AI Trainers:</strong> Teaching AI systems</li>
+<li class="fragment"><strong>Hybrid Creators:</strong> Combining AI with human creativity</li>
+</ul>
+</section>
+
+<!-- Activities Section -->
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Hands-On Activities</h2>
+<p class="fragment typewriter">Let's explore AI content generation tools!</p>
+
+<!-- Interactive Progress Tracker -->
+<div class="fragment" style="display: flex; justify-content: center; margin: 30px 0;">
+    <div style="display: flex; gap: 20px;">
+        <div class="badge" id="video-badge" style="opacity: 0.3;">🎬 Video</div>
+        <div class="badge" id="voice-badge" style="opacity: 0.3;">🎤 Voice</div>
+        <div class="badge" id="music-badge" style="opacity: 0.3;">🎵 Music</div>
+    </div>
+</div>
+
+<div class="fragment">
+    <p><button class="interactive-btn" onclick="console.log('🎉 Ready to start your AI journey!')">🚀 Begin Adventure</button></p>
+</div>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Activity 1: AI Video Creation</h2>
+<p class="fragment">Using <a href="https://www.minimax.io" target="_blank">MiniMax.io</a></p>
+<br>
+<p class="fragment">Steps:</p>
+<ul>
+<li class="fragment">Visit MiniMax Hailuo Video</li>
+<li class="fragment">Use Google Gemini to create video prompts</li>
+<li class="fragment">Generate a 5-second video clip</li>
+<li class="fragment">Experiment with different styles</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Video Prompt Examples</h2>
+<p class="fragment"><strong>Simple:</strong> "A dog running in a park on a sunny day"</p>
+<br>
+<p class="fragment"><strong>Detailed:</strong> "A golden retriever running through green grass in a park, cinematic shot, warm lighting, slow motion, professional quality"</p>
+<br>
+<p class="fragment"><strong>Creative:</strong> "An astronaut floating in space with Earth in the background, peaceful and serene, 4K quality"</p>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Using Gemini for Better Prompts</h2>
+<p class="fragment"><strong>Ask Gemini:</strong></p>
+<p class="fragment">"Help me write a prompt for AI video generation. I want a video about [your idea]. Make it detailed and cinematic."</p>
+<br>
+<p class="fragment"><strong>Include:</strong> Subject, setting, mood, camera style, lighting</p>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Activity 2: Voice Cloning</h2>
+<p class="fragment">Using <a href="https://www.minimax.io" target="_blank" class="glow">MiniMax Speech</a></p>
+<br>
+<div class="demo-container fragment">
+    <h3>🎙️ Voice Cloning Process</h3>
+    <p class="fragment">Steps:</p>
+    <ul>
+    <li class="fragment">🎤 Record a 30-second voice sample</li>
+    <li class="fragment">☁️ Upload to MiniMax Speech 2.5</li>
+    <li class="fragment">🤖 Generate speech with your cloned voice</li>
+    <li class="fragment">🌐 Test different languages and emotions</li>
+    </ul>
+    
+    <p class="fragment"><button class="interactive-btn" onclick="startDemo('audio')">🎵 Try Voice Demo</button></p>
+</div>
+
+<script>
+// Light up voice badge when this slide is shown
+Reveal.on('slidechanged', function(event) {
+    if (event.currentSlide.querySelector('.interactive-btn[onclick*="audio"]')) {
+        const badge = document.getElementById('voice-badge');
+        if (badge) {
+            badge.style.opacity = '1';
+            badge.style.animation = 'glow 2s infinite';
+        }
+    }
+});
+</script>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Voice Sample Tips</h2>
+<p class="fragment"><strong>What to say:</strong></p>
+<p class="fragment">"Hello, my name is [Your Name]. I am excited to learn about AI technology. This voice sample will help create my digital voice. I hope this works well for the demonstration."</p>
+<br>
+<p class="fragment"><strong>Recording tips:</strong> Clear audio, no background noise, natural pace</p>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Test Your Cloned Voice</h2>
+<p class="fragment"><strong>Try these texts:</strong></p>
+<ul>
+<li class="fragment">"Welcome to our AI presentation today!"</li>
+<li class="fragment">"This technology is amazing and exciting."</li>
+<li class="fragment">"I can speak in different languages now."</li>
+<li class="fragment">"The future of AI is bright and promising."</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Activity 3: AI Music Generation</h2>
+<p class="fragment">Using <a href="https://suno.com" target="_blank">Suno.com</a></p>
+<br>
+<p class="fragment">Steps:</p>
+<ul>
+<li class="fragment">Create account on Suno</li>
+<li class="fragment">Use Gemini to write music prompts</li>
+<li class="fragment">Generate a short song</li>
+<li class="fragment">Try different genres and moods</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Music Prompt Examples</h2>
+<p class="fragment"><strong>Simple:</strong> "Happy pop song about friendship"</p>
+<br>
+<p class="fragment"><strong>Detailed:</strong> "Upbeat acoustic folk song about summer adventures, with guitar and harmonica, cheerful vocals, 3 minutes long"</p>
+<br>
+<p class="fragment"><strong>Specific:</strong> "Lo-fi hip hop instrumental for studying, peaceful and calming, with soft piano and subtle beats"</p>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Ask Gemini for Music Ideas</h2>
+<p class="fragment"><strong>Prompt for Gemini:</strong></p>
+<p class="fragment">"Create a detailed music prompt for Suno AI. I want a [genre] song about [topic] that sounds [mood]. Include specific instruments and style details."</p>
+<br>
+<p class="fragment"><strong>Try different genres:</strong> Pop, Rock, Jazz, Electronic, Classical, Country</p>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Prompt Engineering with Gemini</h2>
+<p class="fragment">Tips for better AI-generated content:</p>
+<ul>
+<li class="fragment">Be specific and descriptive</li>
+<li class="fragment">Include style, mood, and genre</li>
+<li class="fragment">Mention camera angles for videos</li>
+<li class="fragment">Specify duration and pace</li>
+<li class="fragment">Use Gemini to refine your prompts</li>
+</ul>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Prompt Structure Template</h2>
+<p class="fragment"><strong>Content type:</strong> [Video/Audio/Music]</p>
+<p class="fragment"><strong>Subject:</strong> [Main subject/character]</p>
+<p class="fragment"><strong>Setting:</strong> [Location, time, environment]</p>
+<p class="fragment"><strong>Action:</strong> [What is happening]</p>
+<p class="fragment"><strong>Style:</strong> [Visual style, genre, artistic influences]</p>
+<p class="fragment"><strong>Mood:</strong> [Emotional tone, atmosphere]</p>
+<p class="fragment"><strong>Technical:</strong> [Camera angle, lighting, quality]</p>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">Using Gemini to Improve</h2>
+<p class="fragment"><strong>Gemini Prompt Template:</strong></p>
+<p class="fragment">"I'm using [tool name] to create [content type]. My initial prompt is: [your basic idea]. Please help me improve this prompt with more details about style, mood, technical specifications, and creative elements to make the output more professional and aligned with my vision."</p>
+</section>
+<!-- Quick Knowledge Check -->
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment">🧠 Knowledge Check</h2>
+<p class="fragment">Let's test what you've learned!</p>
+
+<div class="poll-container fragment">
+    <p><strong>What's the MAIN benefit of AI content generation?</strong></p>
+    <div class="poll-options">
+        <div class="poll-option" onclick="submitPollVote('knowledge-quiz', 0)">
+            It's completely free <span class="poll-count" id="knowledge-quiz_count_0">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('knowledge-quiz', 1)">
+            It replaces human creativity <span class="poll-count" id="knowledge-quiz_count_1">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('knowledge-quiz', 2)">
+            It democratizes content creation <span class="poll-count" id="knowledge-quiz_count_2">0</span>
+        </div>
+        <div class="poll-option" onclick="submitPollVote('knowledge-quiz', 3)">
+            It works without prompts <span class="poll-count" id="knowledge-quiz_count_3">0</span>
+        </div>
+    </div>
+</div>
+
+<p class="fragment"><em>Choose your answer to unlock the final section!</em></p>
+
+<script>
+// Initialize poll data
+if (typeof presentationData !== 'undefined') {
+    presentationData.polls['knowledge-quiz'] = {
+        question: "What's the MAIN benefit of AI content generation?",
+        options: ["It's completely free", "It replaces human creativity", "It democratizes content creation", "It works without prompts"],
+        votes: {}
+    };
+}
+</script>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2 class="fragment glow">Key Takeaways</h2>
+<ul>
+<li class="fragment pulse">📈 AI content generation is rapidly evolving</li>
+<li class="fragment pulse">⚡ Powerful productivity tools are emerging</li>
+<li class="fragment pulse">⚖️ Ethical considerations are crucial</li>
+<li class="fragment pulse">🎨 Human creativity remains essential</li>
+</ul>
+
+<!-- Achievement celebration -->
+<div class="fragment">
+    <script>
+    setTimeout(() => {
+        console.log('🎉 Congratulations! You\'ve completed the journey!');
+        awardBadge('knowledge-master', '🏆 Knowledge Master');
+    }, 3000);
+    </script>
+</div>
+</section>
+
+<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
+<h2>Thank You!</h2>
+<h4 class="fragment">Questions & Discussion</h4>
+<p class="fragment">Ready to create the future of content?</p>
+</section>
+			</div>
+		</div>
+
+		<!-- HandTrack.js library - browser compatible version -->
+		<!-- Fallback: If this fails to load, the script will work without hand tracking -->
+		<!-- <script src="https://unpkg.com/handtrackjs@0.0.13/dist/handtrack.min.js" onerror="console.warn('HandTrack.js failed to load - hand tracking disabled')"></script> -->
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/notes/notes.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/markdown/markdown.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				controls: true,
+				progress: false,
+				
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<!-- <script src="assets/hand-tracking.js"></script> -->
+		<script src="assets/interactive-features.js"></script>
+	</body>
+</html>
