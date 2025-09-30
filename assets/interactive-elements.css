@@ -329,3 +329,8 @@
     left: -32px;
     right: auto;
 }
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+}

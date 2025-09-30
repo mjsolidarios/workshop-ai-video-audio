@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Synth-Design: A Creative Engineering for AI Motion and Sound</title>
+		<title>Synth-Design: A Creative Engineering for AI Motion and Voice</title>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.css">
@@ -28,7 +28,7 @@
 			<div class="slides">
 				<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
 					<h2>Synth-Design</h2>
-					<p class="text-bold">A Creative Engineering for AI Motion and Sound</p>
+					<p class="text-bold">A Creative Engineering for AI Motion and Voice</p>
 					<p>Exploring the Future of AI-Generated Content</p>
 					<div class="social-container">
 						<small>
@@ -60,23 +60,11 @@
 
 <!-- Poll Slide -->
 <section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.6)">
-<h2 class="fragment">📊 Quick Poll</h2>
+
 <div class="poll-container fragment">
     <p><strong>Have you ever used AI to create content?</strong></p>
-    <div class="poll-options">
-        <div class="poll-option" onclick="submitPollVote('intro-poll', 0)">
-            Yes, frequently <span class="poll-count" id="intro-poll_count_0">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('intro-poll', 1)">
-            A few times <span class="poll-count" id="intro-poll_count_1">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('intro-poll', 2)">
-            Never, but interested <span class="poll-count" id="intro-poll_count_2">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('intro-poll', 3)">
-            No, not interested <span class="poll-count" id="intro-poll_count_3">0</span>
-        </div>
-    </div>
+    <img class="qr-code" src="assets/qr-1.png" alt="Slido Poll">
+    <p><small>Quick Poll</small></p>
 </div>
 
 <script>
@@ -93,22 +81,6 @@ if (typeof presentationData !== 'undefined') {
 
 <section data-background-image="assets/bg0.jpg">
 <h2 class="fragment">Why Does This Matter?</h2>
-
-<!-- Animated Statistics -->
-<div class="fragment" style="display: flex; justify-content: space-around; margin: 40px 0;">
-    <div class="counter-container">
-        <div class="counter" id="ai-tools-counter">0</div>
-        <div class="counter-label">AI Tools Available</div>
-    </div>
-    <div class="counter-container">
-        <div class="counter" id="marketers-using-ai-counter">0</div>
-        <div class="counter-label">% of Marketers using AI</div>
-    </div>
-    <div class="counter-container">
-        <div class="counter" id="cost-savings-counter">0</div>
-        <div class="counter-label">% Cost Reduction</div>
-    </div>
-</div>
 
 <ul>
 <li class="fragment">📈 Rapid evolution in AI technology</li>
@@ -147,39 +119,6 @@ Reveal.on('slidechanged', function(event) {
 
 <section data-background-image="assets/bg0.jpg">
 <h2 class="fragment">Real Example: Text-to-Video</h2>
-<div class="flip-card fragment">
-    <div class="flip-card-inner">
-        <div class="flip-card-front">
-            <h3>📝 Input Prompt</h3>
-            <p><strong>"A cat walking on a sunny beach"</strong></p>
-            <p><em>Hover to see AI output!</em></p>
-        </div>
-        <div class="flip-card-back">
-            <h3>🎬 AI Output</h3>
-            <ul>
-                <li>✅ Realistic cat movement</li>
-                <li>🌊 Ocean waves in background</li>
-                <li>☀️ Natural lighting and shadows</li>
-                <li>📷 Smooth camera movement</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<p class="fragment"><button class="interactive-btn" onclick="startDemo('video')">🚀 Try Live Demo</button></p>
-
-<script>
-// Light up video badge when this slide is shown
-Reveal.on('slidechanged', function(event) {
-    if (event.currentSlide.querySelector('.interactive-btn[onclick*="video"]')) {
-        const badge = document.getElementById('video-badge');
-        if (badge) {
-            badge.style.opacity = '1';
-            badge.style.animation = 'pulse 1s infinite';
-        }
-    }
-});
-</script>
 </section>
 
 <section data-background-image="assets/bg0.jpg">
@@ -314,39 +253,6 @@ Reveal.on('slidechanged', function(event) {
     </div>
 </section>
 
-<!-- Marketing Poll Slide -->
-<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.6)">
-<h2 class="fragment">📊 Quick Poll</h2>
-<div class="poll-container fragment">
-    <p><strong>Which success story interests you most?</strong></p>
-    <div class="poll-options">
-        <div class="poll-option" onclick="submitPollVote('marketing-poll', 0)">
-            Coca-Cola's cost savings <span class="poll-count" id="marketing-poll_count_0">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('marketing-poll', 1)">
-            Nike's engagement boost <span class="poll-count" id="marketing-poll_count_1">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('marketing-poll', 2)">
-            Small business accessibility <span class="poll-count" id="marketing-poll_count_2">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('marketing-poll', 3)">
-            Social media scaling <span class="poll-count" id="marketing-poll_count_3">0</span>
-        </div>
-    </div>
-</div>
-
-<script>
-// Initialize poll data
-if (typeof presentationData !== 'undefined') {
-    presentationData.polls['marketing-poll'] = {
-        question: "Which success story interests you most?",
-        options: ["Coca-Cola's cost savings", "Nike's engagement boost", "Small business accessibility", "Social media scaling"],
-        votes: {}
-    };
-}
-</script>
-</section>
-
 <section data-background-image="assets/bg0.jpg">
 <h2 class="fragment">Education Transformation</h2>
 <ul>
@@ -425,58 +331,6 @@ if (typeof presentationData !== 'undefined') {
 <section data-background-image="assets/bg0.jpg">
 <h2 class="fragment">Real Deepfake Cases</h2>
 
-<div class="flip-card fragment">
-    <div class="flip-card-inner">
-        <div class="flip-card-front">
-            <h3>🏢 The $25 Million Video Call</h3>
-            <p>An employee at Arup receives a video call from their "CFO"...</p>
-            <p><em>Hover to see what happened</em></p>
-        </div>
-        <div class="flip-card-back">
-            <h3>⚠️ The Truth</h3>
-            <p>🤖 Deepfake video and voice</p>
-            <p>💰 $25 million transferred to fraudsters</p>
-            <p>🔍 Occurred in February 2024</p>
-            <p>🎨 Part of a sophisticated scam</p>
-        </div>
-    </div>
-</div>
-
-</section>
-
-<!-- Deepfake Protection Poll Slide -->
-<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.6)">
-<h2 class="fragment">📊 Security Poll</h2>
-<p class="fragment"><em>What would you do if you received a suspicious call from your boss?</em></p>
-
-<div class="poll-container fragment">
-    <p><strong>How can you protect yourself from voice scams?</strong></p>
-    <div class="poll-options">
-        <div class="poll-option" onclick="submitPollVote('security-poll', 0)">
-            Always trust caller ID <span class="poll-count" id="security-poll_count_0">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('security-poll', 1)">
-            Verify through another channel <span class="poll-count" id="security-poll_count_1">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('security-poll', 2)">
-            Ignore all urgent calls <span class="poll-count" id="security-poll_count_2">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('security-poll', 3)">
-            Record every conversation <span class="poll-count" id="security-poll_count_3">0</span>
-        </div>
-    </div>
-</div>
-
-<script>
-// Initialize poll data
-if (typeof presentationData !== 'undefined') {
-    presentationData.polls['security-poll'] = {
-        question: "How can you protect yourself from voice scams?",
-        options: ["Always trust caller ID", "Verify through another channel", "Ignore all urgent calls", "Record every conversation"],
-        votes: {}
-    };
-}
-</script>
 </section>
 
 <section data-background-image="assets/bg0.jpg">
@@ -598,26 +452,6 @@ if (typeof presentationData !== 'undefined') {
 </ul>
 </section>
 
-<section data-background-image="assets/bg0.jpg">
-<h2 class="fragment">Success Stories</h2>
-<ul>
-<li class="fragment"><strong>Pixar:</strong> AI speeds up animation, humans direct</li>
-<li class="fragment"><strong>Spotify:</strong> AI suggests, humans curate playlists</li>
-<li class="fragment"><strong>Adobe:</strong> AI tools empower creative professionals</li>
-<li class="fragment"><strong>Netflix:</strong> AI generates thumbnails, humans optimize</li>
-</ul>
-</section>
-
-<section data-background-image="assets/bg0.jpg">
-<h2 class="fragment">New Job Opportunities</h2>
-<ul>
-<li class="fragment"><strong>AI Prompt Engineers:</strong> Writing effective prompts</li>
-<li class="fragment"><strong>AI Content Reviewers:</strong> Quality control specialists</li>
-<li class="fragment"><strong>AI Trainers:</strong> Teaching AI systems</li>
-<li class="fragment"><strong>Hybrid Creators:</strong> Combining AI with human creativity</li>
-</ul>
-</section>
-
 <!-- Activities Section -->
 <section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
 <h2 class="fragment">Hands-On Activities</h2>
@@ -626,14 +460,10 @@ if (typeof presentationData !== 'undefined') {
 <!-- Interactive Progress Tracker -->
 <div class="fragment" style="display: flex; justify-content: center; margin: 30px 0;">
     <div style="display: flex; gap: 20px;">
-        <div class="badge" id="video-badge" style="opacity: 0.3;">🎬 Video</div>
-        <div class="badge" id="voice-badge" style="opacity: 0.3;">🎤 Voice</div>
-        <div class="badge" id="music-badge" style="opacity: 0.3;">🎵 Music</div>
+        <div class="badge" id="video-badge">🎬 Video</div>
+        <div class="badge" id="voice-badge">🎤 Voice</div>
+        <div class="badge" id="music-badge">🎵 Music</div>
     </div>
-</div>
-
-<div class="fragment">
-    <p><button class="interactive-btn" onclick="console.log('🎉 Ready to start your AI journey!')">🚀 Begin Adventure</button></p>
 </div>
 </section>
 
@@ -670,19 +500,18 @@ if (typeof presentationData !== 'undefined') {
 <section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
 <h2 class="fragment">Activity 2: Voice Cloning</h2>
 <p class="fragment">Using <a href="https://www.minimax.io" target="_blank" class="glow">MiniMax Speech</a></p>
-<br>
-<div class="demo-container fragment">
-    <h3>🎙️ Voice Cloning Process</h3>
-    <p class="fragment">Steps:</p>
-    <ul>
-    <li class="fragment">🎤 Record a 30-second voice sample</li>
-    <li class="fragment">☁️ Upload to MiniMax Speech 2.5</li>
-    <li class="fragment">🤖 Generate speech with your cloned voice</li>
-    <li class="fragment">🌐 Test different languages and emotions</li>
-    </ul>
-    
-    <p class="fragment"><button class="interactive-btn" onclick="startDemo('audio')">🎵 Try Voice Demo</button></p>
-</div>
+<small>
+    <div class="demo-container fragment">
+        <h3>🎙️ Voice Cloning Process</h3>
+        <p class="fragment">Steps:</p>
+        <ul>
+        <li class="fragment">🎤 Record a 30-second voice sample</li>
+        <li class="fragment">☁️ Upload to MiniMax Speech 2.5</li>
+        <li class="fragment">🤖 Generate speech with your cloned voice</li>
+        <li class="fragment">🌐 Test different languages and emotions</li>
+        </ul>
+    </div>
+</small>
 
 <script>
 // Light up voice badge when this slide is shown
@@ -773,69 +602,23 @@ Reveal.on('slidechanged', function(event) {
 <section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
 <h2 class="fragment">Using Gemini to Improve</h2>
 <p class="fragment"><strong>Gemini Prompt Template:</strong></p>
-<p class="fragment">"I'm using [tool name] to create [content type]. My initial prompt is: [your basic idea]. Please help me improve this prompt with more details about style, mood, technical specifications, and creative elements to make the output more professional and aligned with my vision."</p>
-</section>
-<!-- Quick Knowledge Check -->
-<section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
-<h2 class="fragment">🧠 Knowledge Check</h2>
-<p class="fragment">Let's test what you've learned!</p>
-
-<div class="poll-container fragment">
-    <p><strong>What's the MAIN benefit of AI content generation?</strong></p>
-    <div class="poll-options">
-        <div class="poll-option" onclick="submitPollVote('knowledge-quiz', 0)">
-            It's completely free <span class="poll-count" id="knowledge-quiz_count_0">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('knowledge-quiz', 1)">
-            It replaces human creativity <span class="poll-count" id="knowledge-quiz_count_1">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('knowledge-quiz', 2)">
-            It democratizes content creation <span class="poll-count" id="knowledge-quiz_count_2">0</span>
-        </div>
-        <div class="poll-option" onclick="submitPollVote('knowledge-quiz', 3)">
-            It works without prompts <span class="poll-count" id="knowledge-quiz_count_3">0</span>
-        </div>
-    </div>
-</div>
-
-<p class="fragment"><em>Choose your answer to unlock the final section!</em></p>
-
-<script>
-// Initialize poll data
-if (typeof presentationData !== 'undefined') {
-    presentationData.polls['knowledge-quiz'] = {
-        question: "What's the MAIN benefit of AI content generation?",
-        options: ["It's completely free", "It replaces human creativity", "It democratizes content creation", "It works without prompts"],
-        votes: {}
-    };
-}
-</script>
+<p class="fragment">"I'm using <span class="glow">[tool name]</span> to create <span class="glow">[content type]</span>. My initial prompt is: <span class="glow">[your basic idea]</span>. Please help me improve this prompt with more details about style, mood, technical specifications, and creative elements to make the output more professional and aligned with my vision."</p>
 </section>
 
 <section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
 <h2 class="fragment glow">Key Takeaways</h2>
 <ul>
-<li class="fragment pulse">📈 AI content generation is rapidly evolving</li>
-<li class="fragment pulse">⚡ Powerful productivity tools are emerging</li>
-<li class="fragment pulse">⚖️ Ethical considerations are crucial</li>
-<li class="fragment pulse">🎨 Human creativity remains essential</li>
+<li class="fragment">📈 AI content generation is rapidly evolving</li>
+<li class="fragment">⚡ Powerful productivity tools are emerging</li>
+<li class="fragment">⚖️ Ethical considerations are crucial</li>
+<li class="fragment">🎨 Human creativity remains essential</li>
 </ul>
-
-<!-- Achievement celebration -->
-<div class="fragment">
-    <script>
-    setTimeout(() => {
-        console.log('🎉 Congratulations! You\'ve completed the journey!');
-        awardBadge('knowledge-master', '🏆 Knowledge Master');
-    }, 3000);
-    </script>
-</div>
 </section>
 
 <section data-background-image="assets/bg0.jpg" data-background-color="rgba(0,0,0,0.5)">
 <h2>Thank You!</h2>
 <h4 class="fragment">Questions & Discussion</h4>
-<p class="fragment">Ready to create the future of content?</p>
+<p class="fragment glow">mjsolidarios@wvsu.edu.ph</p>
 </section>
 			</div>
 		</div>
