@@ -1,6 +1,6 @@
 # Synth-Design: Creative Engineering for AI Motion and Voice
 
-> An awesome project.
+> Mark Joseph J. Solidarios | mjsolidarios@wvsu.edu.ph
 
 Welcome to the Synth-Design workshop! This guide provides a comprehensive overview of the topics covered in the presentation, including AI-powered video and audio generation, hands-on activities, and ethical considerations.
 
