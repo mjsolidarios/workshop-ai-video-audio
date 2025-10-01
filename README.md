@@ -1,3 +1,7 @@
+<p>
+  <img src="websiteqr.png" alt="Workshop Website QR" width="200" height="200">
+</p>
+
 # Synth-Design: Creative Engineering for AI Motion and Voice
 
 > **Facilitator:** Mark Joseph J. Solidarios | West Visayas State University  
@@ -194,4 +198,4 @@ Feel free to ask questions during the workshop's Slido session or reach out afte
 
 ---
 
-**Let's create, experiment, and shape the future of AI-powered media together!**
+**Let's responsibly create, experiment, and shape the future of AI-powered media together!**
